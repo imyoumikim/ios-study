@@ -5,6 +5,7 @@ iOS 공부용 코드 모음
 
 ### SwiftUI
 * Calculator: 아이폰 기본 계산기
+* ACard: 간단한 자기 소개 카드
 
 ### Storyboard
 * BMI-Calculator: BMI 계산기
