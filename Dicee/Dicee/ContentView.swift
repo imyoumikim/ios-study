@@ -31,12 +31,8 @@ struct ContentView: View {
                     self.rightDiceNumber = Int.random(in: 1...6)
                 }) {
                     Text("Roll")
-                        .font(.system(size: 20))
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
-                        .padding()
-                        
-                }.background(Color(red: 0.61, green: 0.11, blue: 0.11))
+                }
+                .buttonStyle(RedButton())
             }.padding()
         }
     }
@@ -50,6 +46,19 @@ struct DiceView: View {
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .padding()
+    }
+}
+
+struct RedButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.title)
+            .bold()
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(Color(red: 0.61, green: 0.11, blue: 0.11))
+            .foregroundStyle(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
